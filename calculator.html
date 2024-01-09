@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+    <h1>Calculator</h1>
+    <div class="whole">
+        
+        <div class="calculator">
+            
+            <input type="text" class="uppertext" readonly id="subInputVal">
+            <br>
+
+            <input type="text" class="lowertext" value="0" id="inpValue">
+            <br>
+            <br>
+
+            
+        <input type="button" value="7" onclick="getVal('7')" class="btn btn-int">
+        <input type="button" value="8" onclick="getVal('8')" class="btn btn-int">
+        <input type="button" value="9" onclick="getVal('9')" class="btn btn-int">
+        <input type="button" value="C" onclick="clearAll()" class="btn btn-clr" id="subInputVal">
+        <br>
+        <br>
+
+        <input type="button" value="4" onclick="getVal('4')" class="btn btn-int">
+        <input type="button" value="5" onclick="getVal('5')" class="btn btn-int">
+        <input type="button" value="6" onclick="getVal('6')" class="btn btn-int">
+        <input type="button" value="Bck" onclick="removeLastDigit()" class="btn btn-clr">
+        <br>
+        <br>
+
+        <input type="button" value="1" onclick="getVal('1')" class="btn btn-int">
+        <input type="button" value="2" onclick="getVal('2')" class="btn btn-int">
+        <input type="button" value="3" onclick="getVal('3')" class="btn btn-int">
+        <input type="button" value="0" onclick="getVal('0')" class="btn btn-int">
+        <br>
+        <br>
+
+        <input type="button" value="+" onclick="getVal('+')" class="btn btn-math">
+        <input type="button" value="-" onclick="getVal('-')" class="btn btn-math">
+        <input type="button" value="/" onclick="getVal('/')" class="btn btn-math">
+        <input type="button" value="x" onclick="getVal('*')" class="btn btn-math">
+        <br>
+        <br>
+
+        <input type="button" value="." onclick="getVal('.')" class="btn btn-int">
+        <input type="button" value="History" onclick="showHistory()" class="btn btn-hist">
+        <input type="button" value="=" onclick="solve()" class="btn btn-ans">
+        </div>
+
+        
+        <div class="his_box">
+            <h2><u>History</u></h2>
+            <br>
+            <div id="historyBox"></div>
+            <br>
+            <input type="button" value="Clr History" onclick="clearHistory()" class="btn btn-histclr">
+        </div>
+    </div>
+
+    <script src="calc.js"></script>
+
+</body>
+</html>
